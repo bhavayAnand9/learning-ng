@@ -1,0 +1,41 @@
+
+<div style="margin-top: 50px;">
+
+  <h3 style="text-align: center; margin-bottom: 30px;"> All repos </h3>
+    <div *ngFor = "let repo of repos">
+
+      <div class="container " style="background-color:azure">
+          <div style="margin-bottom: 5px;" class="row justify-content-md-center">
+            <div class="col-lg-2">{{repo.id}}</div>
+            <div class="col-lg-3">{{repo.name}}</div>
+            <div class="col-lg-1">{{repo.forks}}</div>
+            <div class="col-lg-1">{{repo.watchers}}</div>
+            <div class="col-lg-2">{{repo.language}}</div>
+            <div class="col-lg-1"> <button class="btn btn-light" (click)="pickRepo(repo.id)">PICK</button> </div>
+          </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+<div style="margin-top: 50px;">
+
+    <h3 style="text-align: center; margin-bottom: 30px;"> Picked repos </h3>
+      <div *ngFor = "let pickedrepo of pickedRepos">
+  
+        <div class="container " style="background-color:antiquewhite">
+            <div style="margin-bottom: 5px;" class="row justify-content-md-center">
+              <div class="col"> {{pickedrepo.id}}</div>
+              <div class="col">{{pickedrepo.name}}</div>
+              <div class="col">{{pickedrepo.forks}}</div>
+              <div class="col">{{pickedrepo.watchers}}</div>
+              <div class="col">{{pickedrepo.language}}</div>
+            </div>
+        </div>
+  
+      </div>
+  
+  </div>
+
